@@ -1,6 +1,7 @@
+from api_key import  API_KEY
 from binance import Client, ThreadedDepthCacheManager, ThreadedWebsocketManager
 
-client = Client()
+client = Client(API_KEY)
 
 depth = client.get_order_book(symbol='BNBBTC')
 
